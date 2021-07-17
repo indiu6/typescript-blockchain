@@ -1,0 +1,12 @@
+{
+  "name": "typescript-blockchain",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/indiu6/typescript-blockchain.git",
+  "author": "Sean Yang <hewas6@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js",
+    "prestart": "tsc"
+  }
+}
