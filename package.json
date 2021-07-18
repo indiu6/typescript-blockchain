@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon dist/index.js",
-    "prestart": "tsc -watch"
+    "prestart": "tsc src/index.ts"
   },
   "dependencies": {
     "crypto-js": "^4.0.0"
