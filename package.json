@@ -6,7 +6,7 @@
   "author": "Sean Yang <hewas6@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "nodemon dist/index.js",
     "prestart": "tsc -watch"
   }
 }
