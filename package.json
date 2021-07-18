@@ -8,5 +8,8 @@
   "scripts": {
     "start": "nodemon dist/index.js",
     "prestart": "tsc -watch"
+  },
+  "dependencies": {
+    "crypto-js": "^4.0.0"
   }
 }
