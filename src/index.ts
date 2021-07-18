@@ -1,6 +1,8 @@
-import sha256 from 'crypto-js/sha256';
+// import sha256 from '@types/crypto-js';
 // import hmacSHA512 from 'crypto-js/hmac-sha512';
 // import Base64 from 'crypto-js/enc-base64';
+
+import * as sha256 from 'crypto-js/sha256';
 
 class Block {
   static calculateBlockHash = (
@@ -66,10 +68,20 @@ const createNewBlock = (data: string): Block => {
     newTimeStamp,
   );
 
+  addBlock(newBlock);
+
   return newBlock;
 };
 
 // console.log(createNewBlock('hi'), createNewBlock('bye'));
+
+const getHashForBlock = (aBlock: Block): string =>
+  Block.calculateBlockHash(
+    aBlock.index,
+    aBlock.prevHash,
+    aBlock.timeStamp,
+    aBlock.data,
+  );
 
 const isBlockValid = (candidateBlock: Block, prevBlock: Block): boolean => {
   if (!Block.validateStructure(candidateBlock)) {
@@ -78,7 +90,23 @@ const isBlockValid = (candidateBlock: Block, prevBlock: Block): boolean => {
     return false;
   } else if (prevBlock.hash !== candidateBlock.prevHash) {
     return false;
+  } else if (getHashForBlock(candidateBlock) !== candidateBlock.hash) {
+    return false;
+  } else {
+    return true;
   }
 };
+
+const addBlock = (candidateBlock: Block): void => {
+  if (isBlockValid(candidateBlock, getLatestBlock())) {
+    blockChain.push(candidateBlock);
+  }
+};
+
+createNewBlock('second block');
+createNewBlock('third block');
+createNewBlock('fourth block');
+
+console.log();
 
 export {};
