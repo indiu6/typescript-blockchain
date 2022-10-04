@@ -1,12 +1,13 @@
 {
+  "include": ["src"],
   "compilerOptions": {
+    "outDir": "build",
+    "target": "ES6",
+    "lib": ["ES6", "DOM"],
     "module": "ES6",
-    "target": "ES5",
     "sourceMap": true,
-    "outDir": "dist",
     "moduleResolution": "node",
     "allowJs": true
   },
-  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }

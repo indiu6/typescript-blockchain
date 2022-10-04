@@ -1,14 +1,13 @@
 {
   "name": "typescript-blockchain",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/indiu6/typescript-blockchain.git",
   "author": "Sean Yang <hewas6@gmail.com>",
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "nodemon dist/index.js",
-    "prestart": "tsc"
+    "build": "tsc",
+    "start": "nodemon dist/index.js"
   },
   "dependencies": {
     "crypto-js": "^4.0.0"
