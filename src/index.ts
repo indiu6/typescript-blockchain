@@ -109,4 +109,4 @@ createNewBlock('fourth block');
 
 console.log();
 
-export {};
+export { };

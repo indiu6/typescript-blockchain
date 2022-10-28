@@ -7,7 +7,7 @@ interface IHuman {
 class Human {
   public name: string;
   public age: number;
-  public gender: string;
+  public gender: string | undefined;
   constructor(name: string, age: number, gender?: string) {
     this.name = name;
     this.age = age;
@@ -23,4 +23,4 @@ const sayHi = (person: Human): string => {
 
 console.log(sayHi(Sean));
 
-export {};
+export { };

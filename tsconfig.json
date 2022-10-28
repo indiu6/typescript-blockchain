@@ -4,10 +4,11 @@
     "outDir": "build",
     "target": "ES6",
     "lib": ["ES6", "DOM"],
+    "strict": true,
     "module": "ES6",
+    "allowJs": true,
     "sourceMap": true,
-    "moduleResolution": "node",
-    "allowJs": true
+    "moduleResolution": "node"
   },
   "exclude": ["node_modules"]
 }
