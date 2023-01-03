@@ -3,12 +3,14 @@
   "compilerOptions": {
     "outDir": "build",
     "target": "ES6",
-    "lib": ["ES6", "DOM"],
+    "lib": ["ES6"],
     "strict": true,
-    "module": "ES6",
-    "allowJs": true,
-    "sourceMap": true,
-    "moduleResolution": "node"
+    // "module": "ES6",
+    "module": "CommonJS",
+    // "allowJs": true,
+    "esModuleInterop": true
+    // "sourceMap": true,
+    // "moduleResolution": "node"
   },
   "exclude": ["node_modules"]
 }
